@@ -13,7 +13,10 @@ export const Home = () => {
 			
 			<h1>naves desde flux!</h1>
 
-			{store.naves.map( (elemento)=> <Nave key={elemento.url} uid={elemento.url.replace('https://swapi.dev/api/starships/','').replace('/','')} titulo={elemento.name} model={elemento.model} /> )}
+			<div className=" row flex-row flex-nowrap" style={{overflowX: 'auto'}}>
+				{store.naves.map( (elemento)=> <Nave key={elemento.url} uid={elemento.url.replace('https://swapi.dev/api/starships/','').replace('/','')} titulo={elemento.name} model={elemento.model} /> )}
+			</div>
+
 
 
 		</div>
